@@ -1,0 +1,87 @@
+body
+{
+  background: url("../img/header.png") no-repeat;
+  background-color: #e9eaf3;
+  background-size: 100% auto;
+  background-position: center 45px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo_header
+{
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 45px;
+}
+
+.nav_background
+{
+  background-color: #e9eaf3;
+  border-bottom: 5px solid #dedfe7;
+  background-repeat:repeat-x;
+  height: 40px;
+  -webkit-box-shadow: 0 -15px 50px 0 #000000;
+  box-shadow: 0 -15px 50px 0 #000000;
+}
+
+.article_resume
+{
+  display:block;
+  background-color: #f4f5fb;
+  border: 1px solid #dedfe7;
+  border-bottom: 8px solid #dedfe7;
+  background-repeat: repeat;
+  overflow:hidden; /* hidden*/
+  width: 55%;
+  height: auto;
+  float: left;
+  margin-top: 1%;
+  margin-left: 5%;
+}
+.article_image
+{
+  width: 55%;
+  height: auto;
+  background-color: #f4f5fb;
+  border: 1px solid #dedfe7;
+  border-bottom: 8px solid #dedfe7;
+  overflow:hidden; /* hidden*/
+  float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.article_image_src
+{
+  width: 100%;
+  height: auto;
+}
+p.article_texte
+{
+  padding: 3%;
+  text-indent: 5%;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 12;
+  text-align: justify;
+}
+h1.article_titre
+{
+  padding-left: 5%;
+  padding-right: 2%;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: normal;
+  font-size: 35px;
+  font-family: quicksand;
+}
+@font-face {
+  font-family: "quicksand";
+  src: url("../font/Quicksand_Book.otf") format("otf"),
+
+}
