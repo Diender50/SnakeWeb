@@ -1,11 +1,74 @@
-<h1>Bienvenue sur le blog des crêpes bretonnes !</h1>
+{% extends "base.html" %}
+{% load static %}
 
+
+{% block title %}SnakeWeb{% endblock %}
+
+{% block content %}
+<div class="widget_block">
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+<div class="widget">
+  <p class="widget_texte">
+    lorem ipsum...
+  </p>
+</div>
+</div>
 {% for article in derniers_articles %}
-    <div class="article">
-    	<h3>{{ article.titre }}</h3>
-    	<p>{{ article.contenu|truncatewords_html:80 }}</p>
-      <p><a href="{% url 'lire' id=article.id slug=article.slug %}">Lire la suite</a>
+  <div class="article_image">
+    <img src="{{ article.image }}" class="article_image_src" />
+  </div>
+  <div class="article_resume">
+    <h1 class="article_titre">
+     {{ article.titre }}
+    </h1>
+    <p class="article_date_categorie">
+      Le {{ article.date }} dans {{ article.categorie }}
+    </p>
+    <div class="article_auteur">
+      par {{ article.auteur }}
     </div>
+    <br/>
+    <br/>
+    <p class="article_texte">
+      {{ article.contenu|truncatewords_html:80 }} <br/>
+
+    </p>
+    <a href="{% url 'lire' id=article.id slug=article.slug %}" alt="lire la suite.">
+      <img src="{% static '/blog/img/continue.png' %}" class="article_image_continue"/>
+      <h1 class="article_continue">Lire la suite</h1>
+
+    </a>
+      </div>
 {% empty %}
-    <p>Aucun article.</p>
+  <div class="article_resume">
+    <h1 class="article_titre">
+      Aucun article.
+    </h1>
+
+  </div>
 {% endfor %}
+{% endblock %}
